@@ -1,3 +1,4 @@
+
 def new_input(x1):
     if x1.isdigit():
         number = int(x1)
