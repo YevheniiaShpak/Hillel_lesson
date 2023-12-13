@@ -1,18 +1,14 @@
-
 def new_input(x1):
-    if x1.isdigit():
-        number = int(x1)
-        return f"Ви ввели ціле число: {number}"
-    elif x1.replace('.', '', 1).isdigit() or x1.replace(',', '', 1).isdigit():
-        number1 = float(x.replace(',', '.'))
-        if number1 == 0:
+    if x1.replace('.', '', 1).replace(',', '', 1).lstrip('-').isdigit():
+        number = float(x1.replace(',', '.'))
+        if '.' in x1 or ',' in x1:
+            return f"Ви ввели {'від\'ємне ' if number < 0 else 'позитивне '}дробове число: {number}"
+        elif number == 0:
             return "Ви ввели нуль"
-        elif number1 < 0:
-            return f"Ви ввели від'ємне {'дробове' if '.' in x1 else 'ціле'} число: {number1}"
         else:
-            return f"Ви ввели {'дробове' if '.' in x1 else 'ціле'} число: {number1}"
+            return f"Ви ввели {'від\'ємне ' if number < 0 else 'позитивне '}ціле число: {int(number)}"
     else:
-        return f"Ви ввели не коректне число: {x1}"
+        return f"Ви ввели неправильне число: {x1}"
 
 
 while True:
