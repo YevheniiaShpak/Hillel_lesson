@@ -2,11 +2,11 @@ def new_input(x1):
     if x1.replace('.', '', 1).replace(',', '', 1).lstrip('-').isdigit():
         number = float(x1.replace(',', '.'))
         if '.' in x1 or ',' in x1:
-            return f"Ви ввели {'від\'ємне ' if number < 0 else 'позитивне '}дробове число: {number}"
+            return f"Ви ввели {'від\'ємне ' if number < 0 else 'позитивне'} дробове число: {number}"
         elif number == 0:
             return "Ви ввели нуль"
         else:
-            return f"Ви ввели {'від\'ємне ' if number < 0 else 'позитивне '}ціле число: {int(number)}"
+            return f"Ви ввели {'від\'ємне ' if number < 0 else 'позитивне'} ціле число: {int(number)}"
     else:
         return f"Ви ввели неправильне число: {x1}"
 
