@@ -1,13 +1,12 @@
 import time
 
 class Auto:
-    color = "Black"
-    weight = 1500
-
-    def __init__(self, brand="Jeep", age=3, mark="Renegade"):
+    def __init__(self, brand, age, mark, color=None, weight=None):
         self.brand = brand
         self.age = age
         self.mark = mark
+        self.color = color
+        self.weight = weight
 
     def move(self):
         print("move")
